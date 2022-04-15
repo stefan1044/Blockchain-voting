@@ -1,0 +1,97 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%;
+}
+.content-container {
+  background-color: white;
+  padding: 10px;
+  border-radius: 2%;
+
+  padding-right: 35px;
+  padding-left: 35px;
+}
+.content-container::before {
+  opacity: 80%;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.button-1 {
+  background-color: #3267d8;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #5280e4;
+}
+.input {
+  position: relative;
+  margin-top: 10px;
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: calc(0.3rem * 0.75) calc(0.3rem * 0.5);
+    margin: calc(0.5rem * 0.75 + 3px) calc(0.5rem * 0.5);
+    background: pink;
+    white-space: nowrap;
+    transform: translate(0, 0);
+    transform-origin: 0 0;
+    background: white;
+    transition: transform 120ms ease-in;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #3267d8;
+  }
+  &__field {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border: 1.5px solid currentColor;
+    padding: calc(0.5rem * 1.5) 0.5rem;
+    color: currentColor;
+    background: transparent;
+    border-radius: 4px;
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      & + .input__label {
+        transform: translate(0.25rem, -65%) scale(0.8);
+        color: #5280e4;
+      }
+    }
+  }
+}
